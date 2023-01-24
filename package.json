@@ -2,15 +2,19 @@
   "name": "gueimoflaif",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "prebuild": "rimraf dist",
+    "build": "parcel build src/index.html",
+    "build:dev": "parcel src/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "parcel": "^2.8.3",
+    "rimraf": "^4.1.2"
   }
 }
